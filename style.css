@@ -8,4 +8,5 @@ each with 3 squares on 13inch MacBook */
     height: 250px;
     background-color: black;
     margin: 25px 25px;
+    border: 1px red solid;
 }

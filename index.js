@@ -2,7 +2,6 @@ let arrayOfClickedSquares = []
 
 function colorHandler(event) {
     const clickedSquare = document.getElementById(event)
-    console.log(clickedSquare.style)
     if(arrayOfClickedSquares.includes(clickedSquare)) {
         const matchingGreenSquareIndex = arrayOfClickedSquares.indexOf(clickedSquare);
         arrayOfClickedSquares.splice(matchingGreenSquareIndex, 1)

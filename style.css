@@ -1,0 +1,11 @@
+/* Sizes adjusted to make 2 rows
+each with 3 squares on 13inch MacBook */
+.frame {
+    padding: 50px 150px;
+}
+.square {
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    margin: 25px 25px;
+}

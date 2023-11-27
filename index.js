@@ -10,4 +10,19 @@ function colorHandler(event) {
         arrayOfClickedSquares.push(clickedSquare)
         clickedSquare.style.backgroundColor = "green"
     }
-} 
+    if(arrayOfClickedSquares.length === 6) {
+        arrayOfClickedSquares.reverse()
+        for(i = 0; i < arrayOfClickedSquares.length; i++){
+            changeSquareColor(i)
+        }
+    }
+}
+
+function changeSquareColor(index) {
+    setTimeout(function () {
+      arrayOfClickedSquares[index].style.backgroundColor = "black";
+      if (index === arrayOfClickedSquares.length - 1) {
+        arrayOfClickedSquares = []
+      }
+    }, index === 0 ? 500 : index * 1000)
+}

@@ -1,5 +1,13 @@
 let arrayOfClickedSquares = []
 
+function getColor(square) {
+    return square.style.backgroundColor
+}
+
+function setColor(square, color) {
+    return square.style.backgroundColor = color
+}
+
 function colorHandler(event) {
     const clickedSquare = document.getElementById(event)
     if(arrayOfClickedSquares.includes(clickedSquare)) {

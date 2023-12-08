@@ -1,9 +1,11 @@
 let arrayOfClickedSquares = []
 
+// universal color changer
 function getColor(square) {
     return square.style.backgroundColor
 }
 
+// universal color setter
 function setColor(square, color) {
     return square.style.backgroundColor = color
 }

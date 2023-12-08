@@ -28,29 +28,29 @@ function handleSquareClick(square) {
     }
 }
 
-function colorHandler(event) {
-    const clickedSquare = document.getElementById(event)
-    if(arrayOfClickedSquares.includes(clickedSquare)) {
-        const matchingGreenSquareIndex = arrayOfClickedSquares.indexOf(clickedSquare);
-        arrayOfClickedSquares.splice(matchingGreenSquareIndex, 1)
-        clickedSquare.style.backgroundColor = "black"
-    } else {
-        arrayOfClickedSquares.push(clickedSquare)
-        clickedSquare.style.backgroundColor = "green"
-    }
-    if(arrayOfClickedSquares.length === 6) {
-        arrayOfClickedSquares.reverse()
-        for(i = 0; i < arrayOfClickedSquares.length; i++){
-            changeSquareColor(i)
-        }
-    }
+function reverseArrayAndResetColors(){
+    arrayOfClickedSquares.reverse()
+    arrayOfClickedSquares.forEach((square, index) => {
+        revertSquareColor(index)
+    })
 }
 
-function changeSquareColor(index) {
+function revertSquareColor(index) {
     setTimeout(function () {
       arrayOfClickedSquares[index].style.backgroundColor = "black";
       if (index === arrayOfClickedSquares.length - 1) {
         arrayOfClickedSquares = []
       }
     }, index === 0 ? 500 : index * 1000)
+}
+
+function coloredSquaresGame(event) {
+    const clickedSquare = document.getElementById(event)
+
+    handleSquareClick(clickedSquare)
+
+    if(arrayOfClickedSquares.length === 6) {
+        reverseArrayAndResetColors()
+    }
+
 }

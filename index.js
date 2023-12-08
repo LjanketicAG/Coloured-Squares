@@ -1,16 +1,9 @@
 let arrayOfClickedSquares = []
 
-// universal color changer
-function getColor(square) {
-    return square.style.backgroundColor
-}
-
-// universal color setter
 function setColor(square, color) {
     return square.style.backgroundColor = color
 }
 
-// splice square from array of clicked squares
 function removeFromClickedArray(square) {
     const index = arrayOfClickedSquares.indexOf(square)
     if(index !== -1){

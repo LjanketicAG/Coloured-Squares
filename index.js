@@ -11,10 +11,20 @@ function setColor(square, color) {
 }
 
 // splice square from array of clicked squares
-function removeFromClickedArray(square){
+function removeFromClickedArray(square) {
     const index = arrayOfClickedSquares.indexOf(square)
     if(index !== -1){
         arrayOfClickedSquares.splice(index, 1)
+    }
+}
+
+function handleSquareClick(square) {
+    if(arrayOfClickedSquares.includes(square)) {
+        removeFromClickedArray(square)
+        setColor(square, 'black')
+    } else {
+        arrayOfClickedSquares.push(square)
+        setColor(square, 'green')
     }
 }
 

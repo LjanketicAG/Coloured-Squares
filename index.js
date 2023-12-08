@@ -10,6 +10,14 @@ function setColor(square, color) {
     return square.style.backgroundColor = color
 }
 
+// splice square from array of clicked squares
+function removeFromClickedArray(square){
+    const index = arrayOfClickedSquares.indexOf(square)
+    if(index !== -1){
+        arrayOfClickedSquares.splice(index, 1)
+    }
+}
+
 function colorHandler(event) {
     const clickedSquare = document.getElementById(event)
     if(arrayOfClickedSquares.includes(clickedSquare)) {

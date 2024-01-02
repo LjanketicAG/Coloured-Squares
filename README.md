@@ -2,7 +2,7 @@
  
 ## Interesting small task for junior developers
 This solution was made as a helping guide for a friend, to demonstrate some basic
-level logic.
+logic.
 Goal of the task is to create 6 black squares.
 When a square is clicked it changes color (Black -> Green && Green -> Black)
 When all 6 squares are colored Green, all 6 squares should turn to Black color.

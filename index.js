@@ -1,5 +1,7 @@
 let arrayOfClickedSquares = []
 
+// Some functions are unused for now - will be included later
+
 function setColor(square, color) {
     return square.style.backgroundColor = color
 }

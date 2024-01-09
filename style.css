@@ -1,5 +1,4 @@
-/* Sizes adjusted to make 2 rows
-each with 3 squares on 13inch MacBook */
+/* Dynamically adjusted to fit screen in 2 rows, 3 squares per row */
 html, body {
     height: 100%;
     margin: 0;
